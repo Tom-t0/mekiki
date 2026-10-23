@@ -122,7 +122,9 @@ mekiki/
 │   ├── labels.py           # ラベル体系（軸1〜4、verdict）
 │   ├── email_input.py      # 正規化された入力型
 │   ├── urls.py             # URL/ドメインの抽出・正規化（全ルールの土台）
+│   ├── similarity.py       # 編集距離・混同文字の正規化（自作）
 │   ├── whitelist.py        # ホワイトリストの読み込みと参照
+│   ├── resources_io.py     # 同梱データファイルの読み込み
 │   ├── resources/          # 同梱辞書（コミットする）
 │   │   ├── whitelist.json
 │   │   ├── sender_categories.json
@@ -147,3 +149,32 @@ py -3 -m venv .venv
 # テスト
 ./.venv/Scripts/python.exe -m pytest -q
 ```
+
+## 10. 実装状況（2026-10-23 現在）
+
+実装済み:
+
+| 項目 | モジュール |
+|---|---|
+| ラベル体系（判定・軸1〜4・根拠） | `labels.py` |
+| 正規化された入力型 | `email_input.py` |
+| URL/ドメイン解析 | `urls.py` |
+| 編集距離・混同文字の正規化 | `similarity.py` |
+| ホワイトリストと組織名→カテゴリ表 | `whitelist.py`, `resources/` |
+| ルール基盤とレジストリ | `rules/base.py`, `rules/registry.py` |
+| 軸4のルール7本 | `display_name_mismatch`, `link_mismatch`, `lookalike_domain`, `url_shortener`, `open_redirect`, `ip_address_url`, `image_heavy_body` |
+
+インターフェースのみ（`Rule.implemented = False`。レジストリはスキップする）:
+`known_malicious`（ローカルのブロックリストが必要）、`embedded_qr`（画像データとデコーダが必要）
+
+未着手:
+Chrome拡張によるGmail画面からの抽出 / LLMによる軸2・軸3の判定 / 所見を判定に組み上げる層 /
+ユーザー向け表示文の書き分け / ラベル付けツール（`tools/`） / 第2段階の `newly_registered_domain`
+
+### 判断が必要になった箇所（変更するときはここを読む）
+
+- `image_heavy_body` の閾値（画像2枚以上・本文100文字以下）。本物の画像リッチなメルマガは日本語で150文字程度書くため、200文字では誤反応した。
+- `lookalike_domain` の編集距離の上限は1。2にすると無関係な短いドメイン同士が一致し始める。代わりに文字の入れ替えは検出できない。
+- `open_redirect` はパラメータ名を限定している（`REDIRECT_PARAM_NAMES`）。限定しないと検索ボックス（`?q=`）で誤反応する。
+- 公開接尾辞リストは手書きの部分集合（`MULTI_LABEL_SUFFIXES`）。`co.jp` は対応、地域ドメインは未対応。
+- サンプルドメインは `.example` のみ。`example.com` のサブドメイン形式にすると、全組織の登録可能ドメインが `example.com` に潰れてリンク判定が成立しない。
