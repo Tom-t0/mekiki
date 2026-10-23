@@ -1,0 +1,25 @@
+# Collected email data. Never commit the contents of this directory.
+/data/*
+!/data/.gitkeep
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+
+# Tooling
+.pytest_cache/
+.coverage
+
+# Secrets
+.env
+
+# Editors / OS
+.vscode/
+.idea/
+Thumbs.db
+desktop.ini
