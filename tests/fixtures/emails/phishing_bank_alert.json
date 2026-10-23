@@ -1,0 +1,21 @@
+{
+  "sender_display_name": "【さくら銀行】セキュリティセンター",
+  "sender_address": "security@sakura-bamk.example",
+  "subject": "【重要】お客様の口座が一時凍結されました",
+  "body_text": "お客様の口座に不審なお取引が確認されたため、口座を一時的に凍結いたしました。24時間以内に下記のリンクからご本人確認の手続きを完了してください。手続きが行われない場合、口座は解約となりますのでご注意ください。お急ぎの場合はカスタマーセンターまでお電話ください。",
+  "links": [
+    {
+      "display_text": "https://sakura-bank.example/login",
+      "href": "http://203.0.113.5/verify"
+    },
+    {
+      "display_text": "ご利用規約",
+      "href": "https://bit.ly/3xampl0"
+    },
+    {
+      "display_text": "お問い合わせ",
+      "href": "https://cdn.trusted.example/out?url=https%3A%2F%2Fsakura-bamk.example%2Fform"
+    }
+  ],
+  "image_count": 1
+}

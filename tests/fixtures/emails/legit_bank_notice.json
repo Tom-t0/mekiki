@@ -1,0 +1,17 @@
+{
+  "sender_display_name": "さくら銀行",
+  "sender_address": "info@sakura-bank-mail.example",
+  "subject": "【さくら銀行】ご利用明細のお知らせ",
+  "body_text": "さくら銀行をご利用いただきありがとうございます。2026年3月分のご利用明細をご用意いたしました。インターネットバンキングにログインいただくと、お取引の内容をご確認いただけます。本メールは配信専用のため、ご返信いただいてもお答えできません。お問い合わせは当行ウェブサイトのお問い合わせフォームをご利用ください。",
+  "links": [
+    {
+      "display_text": "sakura-bank.example",
+      "href": "https://sakura-bank-mail.example/t/0f93a1"
+    },
+    {
+      "display_text": "ご利用明細を確認する",
+      "href": "https://sakura-bank.example/statement"
+    }
+  ],
+  "image_count": 2
+}
