@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "note": "Fictional organizations only. Every domain is inside the .example namespace reserved by RFC 2606, so none of them can ever resolve. This file exists only to stop the axis 4 rules from firing on genuine corporate mail; it must never be used to conclude that an email is safe.",
+  "entries": [
+    {
+      "entity": "さくら銀行",
+      "aliases": ["サクラ銀行", "Sakura Bank"],
+      "domains": ["sakura-bank.example", "sakura-bank-mail.example"]
+    },
+    {
+      "entity": "ミドリカード",
+      "aliases": ["みどりカード", "Midori Card"],
+      "domains": ["midori-card.example"]
+    },
+    {
+      "entity": "ハルカ証券",
+      "aliases": ["はるか証券", "Haruka Securities"],
+      "domains": ["haruka-sec.example"]
+    },
+    {
+      "entity": "ニジイロ通販",
+      "aliases": ["にじいろ通販", "Nijiiro Shop"],
+      "domains": ["nijiiro-shop.example", "nijiiro-shop-mail.example"]
+    },
+    {
+      "entity": "ソラペイ",
+      "aliases": ["そらペイ", "SoraPay"],
+      "domains": ["sorapay.example"]
+    },
+    {
+      "entity": "クモ運輸",
+      "aliases": ["くも運輸", "Kumo Express"],
+      "domains": ["kumo-express.example"]
+    },
+    {
+      "entity": "ホシ通信",
+      "aliases": ["ほし通信", "Hoshi Telecom"],
+      "domains": ["hoshi-telecom.example"]
+    },
+    {
+      "entity": "カゼ電力",
+      "aliases": ["かぜ電力", "Kaze Power"],
+      "domains": ["kaze-power.example"]
+    },
+    {
+      "entity": "架空市役所",
+      "aliases": ["カクウ市役所"],
+      "domains": ["kakuu-city.example"]
+    }
+  ]
+}

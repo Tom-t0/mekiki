@@ -1,0 +1,33 @@
+# Known URL shortening services, one registrable domain per line.
+# These are real service domains, not email data: the rule only compares
+# strings against this list and never contacts them.
+# Lines starting with # and blank lines are ignored.
+
+bit.ly
+bitly.com
+t.co
+tinyurl.com
+goo.gl
+is.gd
+ow.ly
+buff.ly
+rb.gy
+cutt.ly
+t.ly
+shorturl.at
+rebrand.ly
+lnkd.in
+amzn.to
+youtu.be
+tiny.cc
+v.gd
+s.id
+urlz.fr
+x.gd
+onl.bz
+qr.ae
+db.tt
+po.st
+mcaf.ee
+soo.gd
+7.ly

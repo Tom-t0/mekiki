@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "note": "Axis 1: claimed entity to sender category. Keyed by the canonical entity name in whitelist.json; aliases are resolved to that name first. Anything not listed falls back to 'other'.",
+  "categories": {
+    "さくら銀行": "bank",
+    "ミドリカード": "card",
+    "ハルカ証券": "securities",
+    "ニジイロ通販": "ecommerce",
+    "ソラペイ": "payment",
+    "クモ運輸": "delivery",
+    "ホシ通信": "telecom_it",
+    "カゼ電力": "utility",
+    "架空市役所": "public_agency"
+  }
+}
