@@ -147,8 +147,8 @@ def test_an_unrelated_japanese_company(
 ) -> None:
     email = make_email(
         sender_display_name="どこか株式会社",
-        sender_address="info@dokoka.co.jp",
-        links=[make_link("https://www.dokoka.co.jp/news", "お知らせ")],
+        sender_address="info@example.co.jp",
+        links=[make_link("https://www.example.co.jp/news", "お知らせ")],
     )
     assert lookalike_domain.check(email, context) == []
 

@@ -107,8 +107,8 @@ def test_non_ip_hosts(host: str | None) -> None:
         ("mail.sakura-bank.example", "sakura-bank.example"),
         ("a.b.c.sakura-bank.example", "sakura-bank.example"),
         # Two label public suffixes must not be split.
-        ("sakura-bank.co.jp", "sakura-bank.co.jp"),
-        ("mail.sakura-bank.co.jp", "sakura-bank.co.jp"),
+        ("example.co.jp", "example.co.jp"),
+        ("mail.example.co.jp", "example.co.jp"),
         ("city.example.lg.jp", "example.lg.jp"),
         ("shop.example.com.au", "example.com.au"),
         # A bare public suffix is returned as is; there is nothing above it.
